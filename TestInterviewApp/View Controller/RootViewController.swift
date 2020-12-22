@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  TestInterviewApp
 //
 //  Created by Sergey Grischyov on 22.12.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
