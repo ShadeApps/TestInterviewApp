@@ -11,6 +11,7 @@ import XCTest
 class ParseTest: XCTestCase {
 
     func testParser() throws {
+        
         let bundle = Bundle(for: type(of: self))
 
         guard let url = bundle.url(forResource: "MockData", withExtension: "json") else {
@@ -23,6 +24,7 @@ class ParseTest: XCTestCase {
 
         XCTAssertEqual(response.query, "harry")
         XCTAssertNotNil(response.items)
+        
     }
 
 }
