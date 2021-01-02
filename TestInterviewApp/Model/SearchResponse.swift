@@ -11,7 +11,7 @@ struct SearchResponse: Codable {
     
 	let filter: String?
 	let filterOptions: String?
-	let items: [Item]?
+	let items: [SearchResult]?
 	let nextPageToken: String?
 	let query: String?
 	let totalCount: Int?

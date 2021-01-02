@@ -7,14 +7,14 @@
 
 import Foundation
 
-private enum Constants {
-    static let schemeHTTP = "http"
-    static let schemeHTTPS = "https"
-    static let hostDevelopment = "api.storytel.net"
-    static let defaultHost = "api.storytel.com"
-}
-
 enum Environment {
+    
+    private enum Constants {
+        static let schemeHTTP = "http"
+        static let schemeHTTPS = "https"
+        static let hostDevelopment = "api.storytel.net"
+        static let defaultHost = "api.storytel.com"
+    }
 
     case development
     case production

@@ -8,16 +8,16 @@
 import XCTest
 @testable import TestInterviewApp
 
-private enum Constants {
-    static let httpMethod = HTTPMethod.post
-    static let path = "test"
-    static let paramName = "param"
-    static let paramName2 = "value"
-    static let paramValue = "newParam"
-    static let paramValue2 = "value2"
-}
-
 class EndpointTest: XCTestCase {
+    
+    private enum Constants {
+        static let httpMethod = HTTPMethod.post
+        static let path = "test"
+        static let paramName = "param"
+        static let paramName2 = "value"
+        static let paramValue = "newParam"
+        static let paramValue2 = "value2"
+    }
     
     typealias StubbedEndpoint = Endpoint<EndpointTypes.Stub, String>
     let endpoint = StubbedEndpoint(path: Constants.path, method: Constants.httpMethod)

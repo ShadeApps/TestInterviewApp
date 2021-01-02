@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4006F92F25A122F800BCABB0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4006F92E25A122F800BCABB0 /* UIView.swift */; };
+		4006F98F25A134BD00BCABB0 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4006F98E25A134BD00BCABB0 /* UITableView.swift */; };
+		4006F99425A135ED00BCABB0 /* BookTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4006F99325A135ED00BCABB0 /* BookTableCell.swift */; };
+		4006F99E25A1371100BCABB0 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4006F99D25A1371100BCABB0 /* SeparatorView.swift */; };
 		408ADD96259E281500CEFB88 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408ADD95259E281500CEFB88 /* Optional.swift */; };
 		408ADD9E259E405100CEFB88 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408ADD9D259E405100CEFB88 /* Environment.swift */; };
 		408ADDA2259E406A00CEFB88 /* NetwrokState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408ADDA1259E406A00CEFB88 /* NetwrokState.swift */; };
@@ -22,7 +26,7 @@
 		40A2FF51259B4FA800BCECDA /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2FF47259B4FA800BCECDA /* Publisher.swift */; };
 		40A2FF53259B4FA800BCECDA /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2FF49259B4FA800BCECDA /* Part.swift */; };
 		40A2FF54259B4FA800BCECDA /* PublisherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2FF4A259B4FA800BCECDA /* PublisherDetail.swift */; };
-		40A2FF55259B4FA800BCECDA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2FF4B259B4FA800BCECDA /* Item.swift */; };
+		40A2FF55259B4FA800BCECDA /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2FF4B259B4FA800BCECDA /* SearchResult.swift */; };
 		40A2FF56259B4FA800BCECDA /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2FF4C259B4FA800BCECDA /* SearchResponse.swift */; };
 		40A2FF57259B4FA800BCECDA /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2FF4D259B4FA800BCECDA /* Author.swift */; };
 		40A2FF65259B5B2D00BCECDA /* ParseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2FF64259B5B2D00BCECDA /* ParseTest.swift */; };
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4006F92E25A122F800BCABB0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		4006F98E25A134BD00BCABB0 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		4006F99325A135ED00BCABB0 /* BookTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableCell.swift; sourceTree = "<group>"; };
+		4006F99D25A1371100BCABB0 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		408ADD95259E281500CEFB88 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		408ADD9D259E405100CEFB88 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		408ADDA1259E406A00CEFB88 /* NetwrokState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwrokState.swift; sourceTree = "<group>"; };
@@ -59,7 +67,7 @@
 		40A2FF47259B4FA800BCECDA /* Publisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		40A2FF49259B4FA800BCECDA /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		40A2FF4A259B4FA800BCECDA /* PublisherDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublisherDetail.swift; sourceTree = "<group>"; };
-		40A2FF4B259B4FA800BCECDA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		40A2FF4B259B4FA800BCECDA /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		40A2FF4C259B4FA800BCECDA /* SearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		40A2FF4D259B4FA800BCECDA /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		40A2FF64259B5B2D00BCECDA /* ParseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseTest.swift; sourceTree = "<group>"; };
@@ -92,10 +100,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4006F99225A1356F00BCABB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4006F99325A135ED00BCABB0 /* BookTableCell.swift */,
+				4006F99D25A1371100BCABB0 /* SeparatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		408ADD94259E27F300CEFB88 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				408ADD95259E281500CEFB88 /* Optional.swift */,
+				4006F92E25A122F800BCABB0 /* UIView.swift */,
+				4006F98E25A134BD00BCABB0 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -125,11 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				40A2FF4C259B4FA800BCECDA /* SearchResponse.swift */,
+				40A2FF4B259B4FA800BCECDA /* SearchResult.swift */,
 				40A2FF45259B4FA800BCECDA /* AudioAsset.swift */,
 				40A2FF4D259B4FA800BCECDA /* Author.swift */,
 				40A2FF46259B4FA800BCECDA /* Cover.swift */,
 				40A2FF44259B4FA800BCECDA /* Format.swift */,
-				40A2FF4B259B4FA800BCECDA /* Item.swift */,
 				40A2FF49259B4FA800BCECDA /* Part.swift */,
 				40A2FF47259B4FA800BCECDA /* Publisher.swift */,
 				40A2FF4A259B4FA800BCECDA /* PublisherDetail.swift */,
@@ -160,6 +179,7 @@
 			children = (
 				40CA29DE25922A2900F71F0B /* AppDelegate.swift */,
 				40F4B48825926007001A17E5 /* View Controller */,
+				4006F99225A1356F00BCABB0 /* View */,
 				40A02BB125939BE50007C273 /* Model */,
 				40A02BB025939BDD0007C273 /* Network */,
 				408ADDB1259E412900CEFB88 /* Providers */,
@@ -298,18 +318,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4006F92F25A122F800BCABB0 /* UIView.swift in Sources */,
 				408ADDB3259E413D00CEFB88 /* SearchResultsProvider.swift in Sources */,
 				40A2FF4E259B4FA800BCECDA /* Format.swift in Sources */,
+				4006F99E25A1371100BCABB0 /* SeparatorView.swift in Sources */,
 				408ADDA6259E407C00CEFB88 /* NetworkError.swift in Sources */,
 				40A2FF54259B4FA800BCECDA /* PublisherDetail.swift in Sources */,
 				40A2FF50259B4FA800BCECDA /* Cover.swift in Sources */,
 				408ADDA2259E406A00CEFB88 /* NetwrokState.swift in Sources */,
 				408ADD9E259E405100CEFB88 /* Environment.swift in Sources */,
 				408ADD96259E281500CEFB88 /* Optional.swift in Sources */,
+				4006F99425A135ED00BCABB0 /* BookTableCell.swift in Sources */,
 				40CA29E325922A2900F71F0B /* RootViewController.swift in Sources */,
 				40A2FF56259B4FA800BCECDA /* SearchResponse.swift in Sources */,
 				40CA29DF25922A2900F71F0B /* AppDelegate.swift in Sources */,
-				40A2FF55259B4FA800BCECDA /* Item.swift in Sources */,
+				40A2FF55259B4FA800BCECDA /* SearchResult.swift in Sources */,
 				40A2FF4F259B4FA800BCECDA /* AudioAsset.swift in Sources */,
 				40A2FF57259B4FA800BCECDA /* Author.swift in Sources */,
 				40A02C0825964E2C0007C273 /* Network.swift in Sources */,
@@ -317,6 +340,7 @@
 				408ADDAA259E40C500CEFB88 /* Endpoint.swift in Sources */,
 				408ADDAE259E40CD00CEFB88 /* Endpoints.swift in Sources */,
 				40A2FF51259B4FA800BCECDA /* Publisher.swift in Sources */,
+				4006F98F25A134BD00BCABB0 /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Item: Codable {
+struct SearchResult: Codable {
 
 	let authors: [Author]?
 	let bayesianAverageRating: Double?
