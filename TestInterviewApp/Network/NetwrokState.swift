@@ -10,11 +10,13 @@ import Foundation
 enum NetworkState {
     
     static var current: Environment {
+        
         #if DEBUG
             return Environment.development
         #else
             return Environment.production
         #endif
+        
     }
     
 }

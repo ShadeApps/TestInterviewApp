@@ -23,7 +23,14 @@ class BookTableCell: UITableViewCell {
         
     }
     
-    private func addViews() {
+    func layoutWith(_ result: BookCellViewModel) {
+        
+    }
+}
+
+extension BookTableCell: UICellLayoutable {
+    
+    internal func addViews() {
         
         let separator = SeparatorView()
         separator.translatesAutoresizingMaskIntoConstraints = false
@@ -38,14 +45,10 @@ class BookTableCell: UITableViewCell {
         
     }
     
-    private func styleViews() {
+    internal func styleViews() {
         
         selectionStyle = .none
         
     }
-
     
-    func layoutWith(_ result: SearchResult) {
-        
-    }
 }

@@ -24,6 +24,7 @@ extension URLSession {
     
     func combinePublisher<T, R>(for endpoint: Endpoint<T, R>,
                                 using requestData: T.RequestData) -> AnyPublisher<R, Error> {
+        
         guard let request = endpoint.create(with: requestData) else {
             return Fail(
                 error: NetworkError.invalidEndpoint(endpoint: endpoint)
@@ -35,6 +36,7 @@ extension URLSession {
             .decode(type: R.self, decoder: JSONDecoder())
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
+        
     }
     
 }

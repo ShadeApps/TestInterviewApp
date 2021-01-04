@@ -20,21 +20,25 @@ enum Environment {
     case production
 
     var scheme: String {
+        
         switch self {
         case .development:
             return Constants.schemeHTTPS
         default:
             return Constants.schemeHTTP
         }
+        
     }
 
     var host: String {
+        
         switch self {
         case .development:
             return Constants.hostDevelopment
         default:
             return Constants.defaultHost
         }
+        
     }
     
 }

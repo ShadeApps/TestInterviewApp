@@ -1,0 +1,11 @@
+/* 
+  Localized.strings
+  TestInterviewApp
+
+  Created by Sergey Grischyov on 04.01.2021.
+  
+*/
+
+"by" = "автор";
+"with" = "читает";
+"search" = "поиск";
