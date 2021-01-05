@@ -35,7 +35,6 @@
 		40CA29E325922A2900F71F0B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA29E225922A2900F71F0B /* MainViewController.swift */; };
 		40CA29E825922A2A00F71F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CA29E725922A2A00F71F0B /* Assets.xcassets */; };
 		40CA29EB25922A2A00F71F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40CA29E925922A2A00F71F0B /* LaunchScreen.storyboard */; };
-		40FB9FB725A3A98F00C119A3 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40FB9FB925A3A98F00C119A3 /* Localized.strings */; };
 		40FB9FC025A3AC0300C119A3 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB9FBF25A3AC0300C119A3 /* Localization.swift */; };
 		40FB9FC425A3AC2E00C119A3 /* Keyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB9FC325A3AC2E00C119A3 /* Keyboardable.swift */; };
 		40FB9FC925A3AC5A00C119A3 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB9FC825A3AC5A00C119A3 /* KeyboardObserver.swift */; };
@@ -49,6 +48,10 @@
 		40FB9FF825A3C41E00C119A3 /* ElementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB9FF725A3C41E00C119A3 /* ElementViewModel.swift */; };
 		40FB9FFC25A3C54100C119A3 /* Collcetion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB9FFB25A3C54100C119A3 /* Collcetion.swift */; };
 		40FBA00025A3C7E900C119A3 /* BookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB9FFF25A3C7E900C119A3 /* BookCellViewModel.swift */; };
+		40FBA00525A3D0B400C119A3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA00425A3D0B400C119A3 /* ImageCache.swift */; };
+		40FBA00925A3D0FE00C119A3 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA00825A3D0FE00C119A3 /* ImageLoader.swift */; };
+		40FBA00F25A3D9DA00C119A3 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FBA00E25A3D9DA00C119A3 /* ImageProvider.swift */; };
+		40FBA01A25A3E23E00C119A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40FBA01C25A3E23E00C119A3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +98,6 @@
 		40CA29F125922A2A00F71F0B /* TestInterviewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestInterviewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CA29F725922A2A00F71F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40FB9FB425A3A98700C119A3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		40FB9FB825A3A98F00C119A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
-		40FB9FBC25A3A99700C119A3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localized.strings; sourceTree = "<group>"; };
 		40FB9FBF25A3AC0300C119A3 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		40FB9FC325A3AC2E00C119A3 /* Keyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboardable.swift; sourceTree = "<group>"; };
 		40FB9FC825A3AC5A00C119A3 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
@@ -110,6 +111,11 @@
 		40FB9FF725A3C41E00C119A3 /* ElementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementViewModel.swift; sourceTree = "<group>"; };
 		40FB9FFB25A3C54100C119A3 /* Collcetion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collcetion.swift; sourceTree = "<group>"; };
 		40FB9FFF25A3C7E900C119A3 /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
+		40FBA00425A3D0B400C119A3 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		40FBA00825A3D0FE00C119A3 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		40FBA00E25A3D9DA00C119A3 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		40FBA01B25A3E23E00C119A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		40FBA01F25A3E23F00C119A3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				408ADDB2259E413D00CEFB88 /* SearchResultsProvider.swift */,
+				40FBA00E25A3D9DA00C119A3 /* ImageProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -265,7 +272,7 @@
 		40FB9FAD25A3A8BB00C119A3 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				40FB9FB925A3A98F00C119A3 /* Localized.strings */,
+				40FBA01C25A3E23E00C119A3 /* Localizable.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -273,6 +280,7 @@
 		40FB9FC725A3AC3D00C119A3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				40FBA00325A3D09F00C119A3 /* ImageLoader */,
 				40FB9FBF25A3AC0300C119A3 /* Localization.swift */,
 				40FB9FC825A3AC5A00C119A3 /* KeyboardObserver.swift */,
 			);
@@ -308,6 +316,15 @@
 				40FB9FFF25A3C7E900C119A3 /* BookCellViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		40FBA00325A3D09F00C119A3 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				40FBA00425A3D0B400C119A3 /* ImageCache.swift */,
+				40FBA00825A3D0FE00C119A3 /* ImageLoader.swift */,
+			);
+			path = ImageLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,8 +408,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40FB9FB725A3A98F00C119A3 /* Localized.strings in Resources */,
 				40CA29EB25922A2A00F71F0B /* LaunchScreen.storyboard in Resources */,
+				40FBA01A25A3E23E00C119A3 /* Localizable.strings in Resources */,
 				40CA29E825922A2A00F71F0B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +439,8 @@
 				40A2FF50259B4FA800BCECDA /* Cover.swift in Sources */,
 				40FB9FFC25A3C54100C119A3 /* Collcetion.swift in Sources */,
 				408ADDA2259E406A00CEFB88 /* NetwrokState.swift in Sources */,
+				40FBA00525A3D0B400C119A3 /* ImageCache.swift in Sources */,
+				40FBA00F25A3D9DA00C119A3 /* ImageProvider.swift in Sources */,
 				408ADD9E259E405100CEFB88 /* Environment.swift in Sources */,
 				408ADD96259E281500CEFB88 /* Optional.swift in Sources */,
 				40FB9FF225A3C35C00C119A3 /* VCViewModel.swift in Sources */,
@@ -439,6 +458,7 @@
 				40A2FF57259B4FA800BCECDA /* Author.swift in Sources */,
 				40FB9FDD25A3B77700C119A3 /* Providable.swift in Sources */,
 				40FB9FCD25A3B25600C119A3 /* Loadable.swift in Sources */,
+				40FBA00925A3D0FE00C119A3 /* ImageLoader.swift in Sources */,
 				40FB9FD125A3B28200C119A3 /* UILoadable.swift in Sources */,
 				40A02C0825964E2C0007C273 /* Network.swift in Sources */,
 				40A2FF53259B4FA800BCECDA /* Part.swift in Sources */,
@@ -480,13 +500,13 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		40FB9FB925A3A98F00C119A3 /* Localized.strings */ = {
+		40FBA01C25A3E23E00C119A3 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				40FB9FB825A3A98F00C119A3 /* en */,
-				40FB9FBC25A3A99700C119A3 /* ru */,
+				40FBA01B25A3E23E00C119A3 /* en */,
+				40FBA01F25A3E23F00C119A3 /* ru */,
 			);
-			name = Localized.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

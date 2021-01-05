@@ -10,18 +10,18 @@ import Combine
 
 typealias SearchProviderResult = Result<SearchResponse, Error>
 
-class SearchResultsProvider: Providable {
+final class SearchResultsProvider: Providable {
     
     var urlSession = URLSession.shared
-    private var publisher: AnyCancellable?
+    private var cancellable: AnyCancellable?
     
     // MARK: - Loading Data
     
     func loadResults(matching query: String, next page: String?, completion: @escaping (SearchProviderResult) -> Void) {
         //Combine is best enjoyed with Swift UI so we use a proxy to
-        //traditional callback while also obscuring Combine inside our provider
+        //traditional callback while also obscuring Combine inside our provider to easily manage this dependency
         
-        publisher = urlSession.combinePublisher(
+        cancellable = urlSession.combinePublisher(
             for: .search(for: query, next: page), using: ()
         ).sink { result in
             switch result {
@@ -38,7 +38,7 @@ class SearchResultsProvider: Providable {
     
 }
 
-extension Providable {
+private extension Providable {
     
     func loadResults(matching query: String,
                      next page: String?,

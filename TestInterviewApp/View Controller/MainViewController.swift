@@ -9,10 +9,6 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    private enum Constants {
-        static let rowHeight = CGFloat(100)
-    }
-    
     internal var centralLoader = UIActivityIndicatorView(style: .large)
     internal var keyboardObserver = KeyboardObserver()
     internal var isLoadingData: Bool = false
@@ -84,7 +80,6 @@ extension MainViewController: UIVCLayoutable {
         
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
-        tableView.rowHeight = Constants.rowHeight
         
         tableView.registerCell(BookTableCell.self)
         

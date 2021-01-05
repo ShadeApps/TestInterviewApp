@@ -9,17 +9,26 @@ import Foundation
 
 struct BookCellViewModel: ElementViewModel {
     
+    private enum Constants {
+        static let defaultCoverURL = URL(string: "https://investors.storytel.com/en/wp-content/themes/storytel/assets/images/logo.png")!
+    }
+    
     let title: String
     let byAuthors: String
     let withNarrators: String
-    let coverURL: URL?
+    let coverURL: URL
     
     init(searchResult: SearchResult) {
         
-        self.title = searchResult.title ?? ""
-        self.byAuthors = searchResult.authors?.compactMap({ $0.name ?? "" }).joined(separator: ", ") ?? ""
-        self.withNarrators = searchResult.narrators?.compactMap({ $0.name ?? "" }).joined(separator: ", ") ?? ""
-        self.coverURL = searchResult.cover?.url
+        title = searchResult.title ?? ""
+        
+        let by = searchResult.authors?.compactMap({ $0.name ?? "" }).joined(separator: ", ") ?? ""
+        byAuthors = by.isEmpty ? "" : Localized.by + by
+        
+        let with = searchResult.narrators?.compactMap({ $0.name ?? "" }).joined(separator: ", ") ?? ""
+        withNarrators = with.isEmpty ? "" : Localized.with + with
+        
+        coverURL = searchResult.cover?.url ?? Constants.defaultCoverURL
         
     }
     
