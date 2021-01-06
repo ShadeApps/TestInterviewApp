@@ -82,6 +82,7 @@ extension MainViewController: UIVCLayoutable {
         tableView.separatorStyle = .none
         
         tableView.registerCell(BookTableCell.self)
+        tableView.registerCell(LoaderCell.self)
         
         tableView.dataSource = self
         
@@ -156,13 +157,25 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let element = viewModel.elementAtIndex(indexPath) as? BookCellViewModel else {
+        switch viewModel.elementAtIndex(indexPath) {
+        
+        case let model as BookCellViewModel:
+            let cell = tableView.dequeueReusableCell(withClass: BookTableCell.self, for: indexPath)
+            cell.layoutWith(model)
+            return cell
+        case _ as LoaderCellViewModel:
+            return tableView.dequeueReusableCell(withClass: LoaderCell.self, for: indexPath)
+        default:
             return UITableViewCell()
         }
         
-        let cell = tableView.dequeueReusableCell(withClass: BookTableCell.self, for: indexPath)
-        cell.layoutWith(element)
-        return cell
+//        guard let element = viewModel.elementAtIndex(indexPath) as? BookCellViewModel else {
+//            return UITableViewCell()
+//        }
+//
+//        let cell = tableView.dequeueReusableCell(withClass: BookTableCell.self, for: indexPath)
+//        cell.layoutWith(element)
+//        return cell
         
     }
     
