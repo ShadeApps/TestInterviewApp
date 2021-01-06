@@ -33,6 +33,46 @@ extension UIView {
         
     }
     
+    func addTo(parentView: UIView, useSafeAreaTop: Bool = false, height: CGFloat) {
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        parentView.addSubview(self)
+        
+        guard let superview = superview else {
+            return
+        }
+        
+        let top = useSafeAreaTop ? superview.safeAreaLayoutGuide.topAnchor : superview.topAnchor
+        
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: top),
+            heightAnchor.constraint(equalToConstant: height),
+            leftAnchor.constraint(equalTo: superview.leftAnchor),
+            rightAnchor.constraint(equalTo: superview.rightAnchor)
+        ])
+        
+    }
+    
+    func addTo(parentView: UIView, below: UIView) {
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        parentView.addSubview(self)
+        
+        guard let superview = superview else {
+            return
+        }
+        
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: below.bottomAnchor),
+            leftAnchor.constraint(equalTo: superview.leftAnchor),
+            rightAnchor.constraint(equalTo: superview.rightAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+        ])
+        
+    }
+    
     func fill(parentView: UIView, useSafeAreaTop: Bool = false) {
         
         translatesAutoresizingMaskIntoConstraints = false

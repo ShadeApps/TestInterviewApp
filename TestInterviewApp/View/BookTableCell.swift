@@ -15,7 +15,6 @@ final class BookTableCell: UITableViewCell {
     private var cover: UIImageView!
     
     private var imageProvider: ImageProvider?
-    private var imageAnimator: UIViewPropertyAnimator?
     
     private enum Constants {
         static let spacing = CGFloat(10)
@@ -48,7 +47,6 @@ final class BookTableCell: UITableViewCell {
         
         cover.image = nil
         cover.alpha = 0.0
-        imageAnimator?.stopAnimation(true)
         imageProvider?.cancel()
         
     }
@@ -79,9 +77,9 @@ extension BookTableCell: UICellLayoutable {
         
         NSLayoutConstraint.activate([
             separator.heightAnchor.constraint(equalToConstant: Constants.defaultSpearatorHeight),
-            separator.leftAnchor.constraint(equalTo: separator.superview!.leftAnchor, constant: Constants.spacing),
-            separator.rightAnchor.constraint(equalTo: separator.superview!.rightAnchor),
-            separator.bottomAnchor.constraint(equalTo: separator.superview!.bottomAnchor)
+            separator.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: Constants.spacing),
+            separator.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            separator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
         
         let stackView = UIStackView()
@@ -141,13 +139,8 @@ extension BookTableCell {
     // MARK: - Image loading and caching
     private func showImage(image: UIImage?) {
         
-        cover.alpha = 0.0
-        imageAnimator?.stopAnimation(false)
-        
         cover.image = image
-        imageAnimator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
-            self.cover.alpha = 1.0
-        })
+        cover.alpha = 1.0
         
     }
     

@@ -12,7 +12,7 @@ final class LoaderCell: UITableViewCell {
     private var loader: UIActivityIndicatorView!
     
     private enum Constants {
-        static let height = CGFloat(80)
+        static let height = CGFloat(70)
     }
     
     // MARK: - Lifecycle
@@ -34,7 +34,7 @@ final class LoaderCell: UITableViewCell {
     override func prepareForReuse() {
         
         super.prepareForReuse()
-        loader?.startAnimating()
+        loader.startAnimating()
         
     }
 }
@@ -49,14 +49,15 @@ extension LoaderCell: UICellLayoutable {
         
         NSLayoutConstraint.activate([
             parentView.heightAnchor.constraint(equalToConstant: Constants.height),
-            parentView.topAnchor.constraint(equalTo: parentView.superview!.topAnchor),
-            parentView.leftAnchor.constraint(equalTo: parentView.superview!.leftAnchor),
-            parentView.rightAnchor.constraint(equalTo: parentView.superview!.rightAnchor),
-            parentView.bottomAnchor.constraint(equalTo: parentView.superview!.bottomAnchor)
+            parentView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            parentView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+            parentView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            parentView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
         
         loader = UIActivityIndicatorView(style: .large)
         loader.centerIn(parentView)
+        loader.startAnimating()
         
     }
     

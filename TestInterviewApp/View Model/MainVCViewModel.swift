@@ -42,8 +42,17 @@ struct MainVCViewModel: VCViewModel {
     
     private mutating func insertLoaderIfNeeded() {
         
+        guard !elements.isEmpty else {
+            return
+        }
+        
         elements.removeAll(where: { $0 is LoaderCellViewModel})
-        elements.append(LoaderCellViewModel())
+        
+        if let next = nextPage, !next.isEmpty {
+            
+            elements.append(LoaderCellViewModel())
+            
+        }
         
     }
     

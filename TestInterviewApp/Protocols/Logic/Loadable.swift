@@ -12,7 +12,7 @@ public protocol Loadable: AnyObject {
     var dataProvider: Providable { get set }
     var isLoadingData: Bool { get set }
 
-    func loadData(animated: Bool)
+    func loadData(animated: Bool, appending: Bool)
     func didLoadData()
     func displayLoadError(_ error: Error)
 }
