@@ -58,9 +58,11 @@ extension SearchInputView: UISearchBarDelegate {
         doAfter(0.5) { [weak self] in
             guard let self = self else { return }
             
-            let searchTrimText = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-            if searchTrimText == text {
-                self.delegate?.searchInputDidChange(sender: self, text: text)
+            if let searchText = searchBar.text {
+                let searchTrimText = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+                if searchTrimText == text {
+                    self.delegate?.searchInputDidChange(sender: self, text: text)
+                }
             }
         }
 
