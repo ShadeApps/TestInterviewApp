@@ -14,6 +14,7 @@ func LOC(_ key: String) -> String {
 }
 
 struct Localized {
+    static let ok  = LOC("OK")
     static let by  = LOC("by") + ": "
     static let with  = LOC("with") + ": "
     static let search  = LOC("search")

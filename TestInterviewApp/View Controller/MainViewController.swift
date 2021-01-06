@@ -9,6 +9,10 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
+    private enum Constants {
+        static let scrollOfsset = CGFloat(150)
+    }
+    
     internal var centralLoader = UIActivityIndicatorView(style: .large)
     internal var keyboardObserver = KeyboardObserver()
     internal var isLoadingData: Bool = false
@@ -18,11 +22,10 @@ final class MainViewController: UIViewController {
     private let tableView = UITableView()
     
     // MARK: - Init
-    init(dataProvider: Providable, viewModel: MainVCViewModel, initialQuery: String) {
+    init(dataProvider: Providable, viewModel: MainVCViewModel) {
         
         self.dataProvider = dataProvider
         self.viewModel = viewModel
-        self.viewModel.searchQuery = initialQuery
         
         super.init(nibName: nil, bundle: nil)
         
@@ -85,7 +88,7 @@ extension MainViewController: UIVCLayoutable {
         tableView.registerCell(LoaderCell.self)
         
         tableView.dataSource = self
-        
+        tableView.delegate = self
     }
     
 }
@@ -106,12 +109,18 @@ extension MainViewController: Loadable {
             return loadTestData()
         }
         
-        showLoader(true)
+        guard !isLoadingData else { return }
+        isLoadingData = true
+        
+        if animated {
+            showLoader(true)
+        }
         
         dataProvider.loadResults(matching: viewModel.searchQuery, next: viewModel.nextPage) { [weak self] result in
             guard let self = self else { return }
             
             self.showLoader(false)
+            self.isLoadingData = false
             
             switch result {
             case .success(let data):
@@ -119,11 +128,12 @@ extension MainViewController: Loadable {
                 let items = (data.items ?? []).map({ BookCellViewModel(searchResult: $0) })
                 
                 if self.viewModel.nextPage.isSome {
-                    self.viewModel.setElements(items)
-                } else {
                     self.viewModel.appendElements(items)
+                } else {
+                    self.viewModel.setElements(items)
                 }
                 
+                self.viewModel.nextPage = data.nextPageToken ?? ""
                 self.didLoadData()
                 
             case .failure(let error):
@@ -134,10 +144,14 @@ extension MainViewController: Loadable {
     }
     
     func didLoadData() {
+        
         tableView.reloadData()
+        
     }
     
     func displayLoadError(_ error: Error) {
+        
+        showAlert(title: error.localizedDescription)
         
     }
     
@@ -163,20 +177,38 @@ extension MainViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withClass: BookTableCell.self, for: indexPath)
             cell.layoutWith(model)
             return cell
-        case _ as LoaderCellViewModel:
+        case is LoaderCellViewModel:
             return tableView.dequeueReusableCell(withClass: LoaderCell.self, for: indexPath)
         default:
             return UITableViewCell()
         }
         
-//        guard let element = viewModel.elementAtIndex(indexPath) as? BookCellViewModel else {
-//            return UITableViewCell()
-//        }
-//
-//        let cell = tableView.dequeueReusableCell(withClass: BookTableCell.self, for: indexPath)
-//        cell.layoutWith(element)
-//        return cell
+    }
+    
+}
+
+extension MainViewController: Paginatable, UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
+        didScroll(scrollView)
+        
+    }
+    
+    func didScroll(_ scrollView: UIScrollView) {
+        
+        let difference = scrollView.contentSize.height - scrollView.frame.size.height - Constants.scrollOfsset
+        
+        let isReachingEnd = scrollView.contentOffset.y >= 0
+            && scrollView.contentOffset.y >= difference
+
+        guard isReachingEnd, let cursor = viewModel.nextPage, !cursor.isEmpty else { return }
+        loadData(animated: false)
+        
+    }
+    
+    func resetCursor() {
+        viewModel.nextPage = nil
     }
     
 }

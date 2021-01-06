@@ -9,6 +9,8 @@ import UIKit
 
 public protocol Paginatable: AnyObject {
     
+    var isLoadingData: Bool { get set }
+    
     func didScroll(_ scrollView: UIScrollView)
     func resetCursor()
     

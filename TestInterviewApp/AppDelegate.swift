@@ -16,9 +16,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        var mainViewModel = MainVCViewModel()
+        mainViewModel.searchQuery = "Harry"
+        
         window?.rootViewController = MainViewController(dataProvider: SearchResultsProvider(),
-                                                        viewModel: MainVCViewModel(),
-                                                        initialQuery: "Harry")
+                                                        viewModel: mainViewModel)
         window?.makeKeyAndVisible()
         
         return true
